@@ -1,0 +1,22 @@
+{
+    "name": "bigmom/health",
+    "description": "Health check package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Bigmom\\Health\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bigmom\\Health\\Providers\\HealthServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.3",
+        "laravel/framework": "^8.0"
+    }
+}

@@ -1,0 +1,41 @@
+<?php
+
+namespace {{ namespace }};
+
+use Bigmom\Health\Contracts\Handler;
+use Exception;
+
+class {{ class }} implements Handler
+{
+    /**
+     * The name of the service handled.
+     *
+     * @var \Exception
+     */
+    protected $serviceName;
+
+    public function __construct(string $serviceName)
+    {
+        $this->serviceName = $serviceName;
+    }
+
+    /**
+     * Function run when service is deemed healthy.
+     *
+     * @return void
+     */
+    public function handleSuccess(): void
+    {
+        //
+    }
+
+    /**
+     * Function responsible for handling exception thrown.
+     *
+     * @return void
+     */
+    public function handleException(Exception $e): void
+    {
+        //
+    }
+}

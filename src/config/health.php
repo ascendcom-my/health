@@ -1,18 +1,23 @@
 <?php
 
-use Bigmom\Health\Checks\DatabaseCheck;
-use Bigmom\Health\Handlers\LogHandler;
-
 return [
+
+    'register-events' => false,
+
+    'stacks' => [
+
+        'quick-diagnose' => [
     
-    'quick-diagnose' => [
-
-        'checks' => [
-            DatabaseCheck::class,
-        ],
-
-        'handlers' => [
-            LogHandler::class,
+            'checks' => [
+                Bigmom\Health\Checks\DatabaseCheck::class,
+                Bigmom\Health\Checks\CacheCheck::class,
+            ],
+    
+            'handlers' => [
+                Bigmom\Health\Handlers\LogHandler::class,
+                // Bigmom\Health\Handlers\BroadcastHandler::class,
+            ],
+    
         ],
 
     ],

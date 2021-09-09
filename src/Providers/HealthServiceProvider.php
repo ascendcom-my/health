@@ -4,6 +4,7 @@ namespace Bigmom\Health\Providers;
 
 use Bigmom\Health\Commands\HealthCheckMakeCommand;
 use Bigmom\Health\Commands\HealthHandlerMakeCommand;
+use Bigmom\Health\Commands\RunHealthCheck as CommandsRunHealthCheck;
 use Bigmom\Health\Contracts\HealthCheckJob;
 use Bigmom\Health\Events\HealthCheckFailed;
 use Bigmom\Health\Events\HealthCheckSuccessful;
@@ -42,6 +43,7 @@ class HealthServiceProvider extends ServiceProvider
             $this->commands([
                 HealthCheckMakeCommand::class,
                 HealthHandlerMakeCommand::class,
+                CommandsRunHealthCheck::class
             ]);
         }
 
